@@ -15,7 +15,7 @@
     <div id="fullpage">
 
         <!-- Nav & Header -->
-    
+
         <div class="section">
             <div id="header">
                 <div class="container">
@@ -38,7 +38,7 @@
             </div>
         </div>
         <!-- About -->
-    
+
         <div class="section">
             <div id="about">
                 <div class="container">
@@ -52,7 +52,7 @@
                                 consequuntur. Eos dolores quia ea sapiente consequatur At esse labore ad dolore
                                 perspiciatis.
                             </p>
-    
+
                             <div class="tab-titles">
                                 <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                                 <p class="tab-links" onclick="opentab('education')">Education</p>
@@ -87,7 +87,8 @@
                             <!-- Experience -->
                             <div class="tab-contents" id="experience">
                                 <ul>
-                                    <li><span>March 16 2024 - July 22 2024</span><br>Level 1 IT support @ St. Luke's Hospital Internship<br>2018 - 2021</li>
+                                    <li><span>March 16 2024 - July 22 2024</span><br>Level 1 IT support @ St. Luke's
+                                        Hospital Internship<br>2018 - 2021</li>
                                 </ul>
                             </div>
                         </div>
@@ -95,9 +96,9 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Portfolio -->
-    
+
         <div class="section">
             <div id="portfolio">
                 <div class="container">
@@ -130,7 +131,7 @@
         </div>
 
         <!-- Contact -->
-        
+
         <div class="section">
             <div id="contact">
                 <div class="container">
@@ -167,7 +168,31 @@
         </div>
     </div>
 
-    <script src="/scripts.js" type="text/JavaScript"></script>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabName) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+
+
+        var sideMenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sideMenu.style.right = "0";
+        }
+        function closemenu() {
+            sideMenu.style.right = "-200px";
+        }
+    </script>
 </body>
 
 </html>
